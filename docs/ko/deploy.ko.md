@@ -2,7 +2,7 @@
 layout: page
 title: OpenNHP 배포
 nav_order: 6
-permalink: /kr/deploy/
+permalink: /ko/deploy/
 ---
 
 # OpenNHP 배포
@@ -25,10 +25,10 @@ permalink: /kr/deploy/
 
 개발 호스트가 Windows 또는 macOS라고 가정하면, 가상 머신 환경(예: VirtualBox)을 설치하고 두 대의 Linux 가상 머신을 생성하여 간단한 OpenNHP 테스트 환경을 구축할 수 있습니다. 가상 머신을 생성할 때, 네트워크 카드 옵션을 `"Host-only Adapter"`로 설정하면(아래 그림 참고) 가상 머신의 IP와 개발 호스트의 IP가 동일한 서브넷에 속하게 할 수 있습니다.
 
- ![VirtualBox 네트워크](../images/vbnetwork.png)
+ ![VirtualBox 네트워크](/images/vbnetwork.png)
 
  **참고:** 해당 가상 머신이 동시에 인터넷 접속 능력을 갖추도록 하려면, `"NAT"` 네트워크 카드를 추가로 하나 더 설정할 수 있습니다.
- ![VirtualBox 네트워크](../images/vbnetwork2.png)
+ ![VirtualBox 네트워크](/images/vbnetwork2.png)
 
 이제 NHP 세 가지 핵심 구성 요소의 환경 구성은 다음과 같습니다.
 
@@ -38,7 +38,7 @@ permalink: /kr/deploy/
 
 ### 2.2 개발/테스트 환경의 네트워크 토폴로지 및 기본 정보
 
- ![OpenNHP-Dev-WSL](../images/dev_wsl.png)
+ ![OpenNHP-Dev-WSL](/images/dev_wsl.png)
 
 | 서버 이름 | IP 주소 | 기본 설정 정보  |
 |:--:|:--:|:--:|

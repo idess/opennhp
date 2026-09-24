@@ -2,14 +2,14 @@
 layout: page
 title: OpenClaw+DHP 데이터 보안
 nav_order: 11
-permalink: /kr/claw-dhp-demo/
+permalink: /ko/claw-dhp-demo/
 ---
 
 # OpenClaw + DHP 데이터 보안 강화 아키텍처
 
 **DHP(데이터 콘텐츠 은닉 프로토콜)**를 통해 **OpenClaw**의 보안을 강화합니다. 사용자의 민감한 데이터(사진, 메일 등)는 NHP-DB(DHP 데이터 브로커)를 통해 제로 트러스트 데이터 객체(ZTDO) 형태로 암호화되어 저장됩니다. 사용자가 AI 작업을 시작하면 해당 작업은 **신뢰 실행 환경(TEE)** 내에서 실행되며, NHP 에이전트는 NHP 서버의 통제 하에 NHP-DB에서 암호화된 데이터를 가져와 TEE 내부에서 복호화합니다. **민감한 데이터는 처음부터 끝까지 신뢰 실행 환경을 벗어나지 않습니다.**
 
-![OpenClaw + DHP 아키텍처](../images/OpenClaw_DHP_Arch.gif)
+![OpenClaw + DHP 아키텍처](/images/OpenClaw_DHP_Arch.gif)
 
 ## 핵심 보안 특징
 

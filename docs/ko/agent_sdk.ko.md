@@ -2,7 +2,7 @@
 layout: page
 title: 클라이언트 SDK
 nav_order: 10
-permalink: /kr/agent_sdk/
+permalink: /ko/agent_sdk/
 ---
 
 # 클라이언트 SDK

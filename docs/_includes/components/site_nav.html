@@ -1,12 +1,14 @@
 {%- comment -%}
   Override of jtd's site_nav.html. Splits the nav by language so that
-  visitors on /zh-cn/ pages see the Chinese sidebar, and everyone else
-  sees the English one. The filter is based on page URLs — pages whose
-  URL contains `/zh-cn/` are Chinese, everything else is English.
+  visitors on /zh-cn/ or /ko/ pages see that language's sidebar, and
+  everyone else sees the English one. The filter is based on page URLs
+  — pages whose URL contains `/zh-cn/` or `/ko/` are that language,
+  everything else is English.
 {%- endcomment -%}
 
-{% assign is_zh = false %}
-{% if page.url contains '/zh-cn/' %}{% assign is_zh = true %}{% endif %}
+{% assign page_lang = 'en' %}
+{% if page.url contains '/zh-cn/' %}{% assign page_lang = 'zh-cn' %}{% endif %}
+{% if page.url contains '/ko/' %}{% assign page_lang = 'ko' %}{% endif %}
 
 {%- comment -%}
   Build lang_pages manually — Liquid's where_exp struggles with
@@ -14,9 +16,10 @@
 {%- endcomment -%}
 {% assign lang_pages = "" | split: "" %}
 {% for p in site.html_pages %}
-  {% assign p_is_zh = false %}
-  {% if p.url contains '/zh-cn/' %}{% assign p_is_zh = true %}{% endif %}
-  {% if p_is_zh == is_zh %}
+  {% assign p_lang = 'en' %}
+  {% if p.url contains '/zh-cn/' %}{% assign p_lang = 'zh-cn' %}{% endif %}
+  {% if p.url contains '/ko/' %}{% assign p_lang = 'ko' %}{% endif %}
+  {% if p_lang == page_lang %}
     {% assign lang_pages = lang_pages | push: p %}
   {% endif %}
 {% endfor %}

@@ -3,7 +3,7 @@ layout: page
 title: OpenNHP 소개
 nav_order: 1
 description: "OpenNHP: 제로 트러스트 네트워크 은닉 프로토콜"
-permalink: /kr/overview/
+permalink: /ko/overview/
 ---
 
 # OpenNHP: 제로 트러스트 네트워크 은닉 프로토콜

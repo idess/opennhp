@@ -2,7 +2,7 @@
 layout: page
 title: DHP 빠른 시작
 nav_order: 3
-permalink: /kr/dhp_quick_start/
+permalink: /ko/dhp_quick_start/
 ---
 
 # DHP 빠른 시작
@@ -25,7 +25,7 @@ OpenDHP의 주요 목적은 데이터 주권을 강화하는 것으로, 데이�
 이 빠른 시작 가이드는 개발자가 OpenDHP Docker 환경을 빠르게 구축하고, 소스 코드를 빌드하며, OpenDHP의 핵심 기능을 테스트하는 데 도움을 줍니다. 이 환경은 가볍고 사용하기 쉽게 설계되어, OpenDHP를 빠르게 테스트하고 디버깅하고자 하는 개발자에게 매우 적합합니다.
 
 ### 1.1 아키텍처
-![Architecture](../images/OpenDHP_Arch_CN.png)
+![Architecture](/images/OpenDHP_Arch_CN.png)
 
 #### 1.1.1 네트워크 토폴로지
 
@@ -40,10 +40,10 @@ OpenDHP의 주요 목적은 데이터 주권을 강화하는 것으로, 데이�
 위험 계좌 식별의 포괄성과 정확성을 높이기 위해, 은행은 내부 리스크 통제 식별 외에도 다른 은행, 지불 기관, 공안 또는 규제 플랫폼이 제공하는 위험 계좌 정보와 연계 검증을 수행할 수 있습니다. 데이터 보안과 사용자 프라이버시를 보장하기 위해, 각 참여 주체는 기밀 컴퓨팅 기술을 통해 협업하여 특정 계좌에 위험 행위가 존재하는지 판단하며, 사용자 데이터를 직접 평문으로 노출하는 것을 방지합니다.
 
 #### 1.2.2 시나리오 아키텍처
-![Scenario Architecture](../images/OpenDHP_Scenario_CN.png)
+![Scenario Architecture](/images/OpenDHP_Scenario_CN.png)
 
 ## 2. Docker 환경 설치
-이 부분에 대해서는 [NHP 빠른 시작](/kr/nhp_quick_start/)의 관련 섹션을 참조하세요.
+이 부분에 대해서는 [NHP 빠른 시작](/ko/nhp_quick_start/)의 관련 섹션을 참조하세요.
 
 ## 3. 환경 실행 및 설정
 

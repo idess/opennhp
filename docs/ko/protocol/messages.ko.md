@@ -3,7 +3,7 @@ layout: page
 title: 메시지 타입
 parent: 프로토콜 참조
 nav_order: 2
-permalink: /kr/protocol/messages/
+permalink: /ko/protocol/messages/
 description: NHP와 DHP의 모든 메시지 타입에 대한 참조 — 방향, 페이로드 필드.
 ---
 
@@ -21,7 +21,7 @@ description: NHP와 DHP의 모든 메시지 타입에 대한 참조 — 방향, 
 
 ## 메시지 캡슐화
 
-모든 메시지 타입은 동일한 메시지 헤더를 공유하며(참고: [메시지 헤더]({{ '/kr/protocol/header/' | relative_url }})),
+모든 메시지 타입은 동일한 메시지 헤더를 공유하며(참고: [메시지 헤더]({{ '/ko/protocol/header/' | relative_url }})),
 그 뒤에 암호화된 페이로드가 이어집니다. 페이로드 형식은 JSON이며, 선택적으로
 zlib 압축(`NHP_FLAG_COMPRESS` 플래그로 제어)을 거친 뒤, 메시지 헤더 파싱
 과정에서 파생된 세션 키를 사용해 AEAD 암호화됩니다 — 단, 타입 설명에서 별도로
@@ -257,12 +257,12 @@ DHP는 NHP의 온라인 포맷을 재사용하여 독립된 일련의 흐름 —
 `ServerDBAckMsg`, `DHPKnockMsg`)는
 [`nhp/common/nhpmsg.go`](https://github.com/OpenNHP/opennhp/blob/main/nhp/common/nhpmsg.go)에
 정의되어 있습니다. 전용 DHP 참조 페이지에서 이를 상세히 다룰 예정이며,
-그때까지는 [DHP 빠른 시작]({{ '/kr/dhp_quick_start/' | relative_url }})을 참고하십시오.
+그때까지는 [DHP 빠른 시작]({{ '/ko/dhp_quick_start/' | relative_url }})을 참고하십시오.
 
 ---
 
 ## 함께 보기
 
-- [메시지 헤더]({{ '/kr/protocol/header/' | relative_url }}) — 모든 타입이 공유하는 봉투(envelope)
-- [암호화 알고리즘]({{ '/kr/cryptography/' | relative_url }}) — 페이로드가 암호화되는 방식
-- [용어집]({{ '/kr/glossary/' | relative_url }}) — 이 페이지에서 등장하는 각 역할의 표준 명칭
+- [메시지 헤더]({{ '/ko/protocol/header/' | relative_url }}) — 모든 타입이 공유하는 봉투(envelope)
+- [암호화 알고리즘]({{ '/ko/cryptography/' | relative_url }}) — 페이로드가 암호화되는 방식
+- [용어집]({{ '/ko/glossary/' | relative_url }}) — 이 페이지에서 등장하는 각 역할의 표준 명칭

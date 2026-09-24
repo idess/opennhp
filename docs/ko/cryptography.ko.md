@@ -2,7 +2,7 @@
 layout: page
 title: 암호화 알고리즘
 nav_order: 4
-permalink: /kr/cryptography/
+permalink: /ko/cryptography/
 ---
 
 # 암호화 알고리즘
