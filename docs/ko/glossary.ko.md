@@ -2,7 +2,7 @@
 layout: page
 title: 용어집
 nav_order: 14
-permalink: /kr/glossary/
+permalink: /ko/glossary/
 description: OpenNHP와 CSA NHP 규격이 공유하는 표준 용어.
 ---
 
@@ -71,4 +71,4 @@ OpenNHP와 CSA NHP 규격이 공유하는 표준 용어입니다. 이슈, PR, �
 
 ## 메시지 타입 명명 접두사
 
-모든 NHP 프로토콜 메시지 이름은 `NHP-`로 시작하고, 이어서 세 글자 니모닉이 붙습니다. 전체 목록은 [메시지 타입 참조]({{ '/kr/protocol/messages/' | relative_url }})를 참고하세요.
+모든 NHP 프로토콜 메시지 이름은 `NHP-`로 시작하고, 이어서 세 글자 니모닉이 붙습니다. 전체 목록은 [메시지 타입 참조]({{ '/ko/protocol/messages/' | relative_url }})를 참고하세요.

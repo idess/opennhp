@@ -6,6 +6,7 @@
 [![fr](https://img.shields.io/badge/lang-fr-green.svg)](https://github.com/OpenNHP/opennhp/blob/main/README.fr.md)
 [![es](https://img.shields.io/badge/lang-es-green.svg)](https://github.com/OpenNHP/opennhp/blob/main/README.es.md)
 [![id](https://img.shields.io/badge/lang-id-green.svg)](https://github.com/OpenNHP/opennhp/blob/main/README.id.md)
+[![ko](https://img.shields.io/badge/lang-ko-green.svg)](https://github.com/OpenNHP/opennhp/blob/main/README.ko.md)
 
 ![OpenNHP Logo](docs/images/logo11.png)
 

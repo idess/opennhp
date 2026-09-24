@@ -1,14 +1,22 @@
-{% assign is_zh = false %}
-{% if page.url contains '/zh-cn/' %}{% assign is_zh = true %}{% endif %}
+{% assign page_lang = 'en' %}
+{% if page.url contains '/zh-cn/' %}{% assign page_lang = 'zh-cn' %}{% endif %}
+{% if page.url contains '/ko/' %}{% assign page_lang = 'ko' %}{% endif %}
 
 {% assign year = site.time | date: '%Y' %}
-{% if is_zh %}
+{% if page_lang == 'zh-cn' %}
   {% assign edit_text = '在 GitHub 上编辑此页' %}
   {% assign back_text = '返回顶部' %}
   {% assign ack_prefix = '致谢：' %}
   {% assign ack_suffix = ' Jekyll 主题' %}
   {% assign last_modified_label = '页面最后修改：' %}
   {% capture copyright_text %}Copyright © {{ year }} <a href="https://opennhp.org">OpenNHP</a> 开源项目{% endcapture %}
+{% elsif page_lang == 'ko' %}
+  {% assign edit_text = 'GitHub에서 이 페이지 편집' %}
+  {% assign back_text = '맨 위로' %}
+  {% assign ack_prefix = '감사의 말: ' %}
+  {% assign ack_suffix = ' Jekyll 테마' %}
+  {% assign last_modified_label = '페이지 최종 수정: ' %}
+  {% capture copyright_text %}Copyright © {{ year }} <a href="https://opennhp.org">OpenNHP</a> 오픈소스 프로젝트{% endcapture %}
 {% else %}
   {% assign edit_text = site.gh_edit_link_text %}
   {% assign back_text = site.back_to_top_text %}

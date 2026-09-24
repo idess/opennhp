@@ -2,7 +2,7 @@
 layout: page
 title: 서버 플러그인 개발
 nav_order: 9
-permalink: /kr/server_plugin/
+permalink: /ko/server_plugin/
 ---
 
 # OpenNHP 플러그인 개발 튜토리얼
@@ -68,7 +68,7 @@ OpenNHP 플러그인은 맞춤형 서비스를 통해 서로 다른 정부 플�
 
 플러그인 전체의 실행 흐름은 사용자가 요청을 시작하는 것부터 서버가 플러그인을 파싱하고, 플러그인이 로직을 실행한 뒤 최종적으로 사용자에게 피드백을 반환하는 전체 과정을 포함합니다. 각 단계는 핵심적인 역할을 하며, NHP 서버가 플러그인을 통해 다양한 시나리오의 요청 처리 요구사항, 특히 신원 인증과 노크 패킷 메커니즘을 충족할 수 있도록 보장합니다.
 
-![플러그인 동작 원리 아키텍처 다이어그램](../images/plugin_image2.png)
+![플러그인 동작 원리 아키텍처 다이어그램](/images/plugin_image2.png)
 
 ***그림 1 플러그인 동작 원리 아키텍처 다이어그램***
 
@@ -121,7 +121,7 @@ OpenNHP 플러그인을 개발하기 전에 다음 개발 환경이 구축되어
 
 먼저 server/plugins 디렉터리 아래에 새 플러그인 프로젝트를 생성합니다. 예를 들어 지금 "example"이라는 이름의 플러그인 프로젝트를 생성해야 한다고 가정합니다.
 
-![example 플러그인 상위 디렉터리](../images/plugin_image3.png)
+![example 플러그인 상위 디렉터리](/images/plugin_image3.png)
 
 ***그림 2 example 플러그인 상위 디렉터리***
 
@@ -136,7 +136,7 @@ example.go와 같은 일반적인 플러그인 파일은 다음 내용을 포함
 - 보조 함수
 - 메인 플러그인 함수
 
-![example 플러그인 디렉터리 구조 예시](../images/plugin_image4.png)
+![example 플러그인 디렉터리 구조 예시](/images/plugin_image4.png)
 
 ***그림 3 example 플러그인 디렉터리 구조 예시***
 
@@ -185,11 +185,11 @@ example.go와 같은 일반적인 플러그인 파일은 다음 내용을 포함
 
 플러그인 기능 설계에 따라 코드를 개발하며, "example" 플러그인을 예로 들면 HTTP 요청을 수신하여 처리하는 AuthWithHttp 함수, 사용자명과 비밀번호를 검증하고 노크를 수행하는 authRegular 함수, 로그인 페이지 리소스를 로드하는 authAndShowLogin 함수 등을 설계하며, 기능 구현을 위한 보조 함수도 설계해야 합니다. 구체적인 기능 요구사항에 따라 확장 개발이 가능합니다.
 
-![example 플러그인 핵심 코드 및 보조 코드 함수 예시](../images/plugin_image6.png)
+![example 플러그인 핵심 코드 및 보조 코드 함수 예시](/images/plugin_image6.png)
 
-![example 플러그인 핵심 코드 및 보조 코드 함수 예시](../images/plugin_image7.png)
+![example 플러그인 핵심 코드 및 보조 코드 함수 예시](/images/plugin_image7.png)
 
-![example 플러그인 핵심 코드 및 보조 코드 함수 예시](../images/plugin_image8.png)
+![example 플러그인 핵심 코드 및 보조 코드 함수 예시](/images/plugin_image8.png)
 
 ***그림 4, 5, 6 example 플러그인 핵심 코드 및 보조 코드 함수 예시***
 
@@ -203,13 +203,13 @@ example.go와 같은 일반적인 플러그인 파일은 다음 내용을 포함
 
 ***플러그인 디렉터리 정의***: Makefile 상단에서 플러그인 디렉터리를 정의하는 코드 한 줄을 볼 수 있으며, 아래 그림과 같습니다.
 
-![플러그인 디렉터리 정의](../images/plugin_image11.png)
+![플러그인 디렉터리 정의](/images/plugin_image11.png)
 
 ***그림 7 플러그인 디렉터리 정의***
 
 이 코드는 플러그인의 저장 위치, 즉 server/plugins 디렉터리를 지정합니다. 모든 플러그인의 소스 코드와 설정 파일은 이 디렉터리에 위치하게 되며, NHP 서비스를 시작할 때 플러그인이 정상적으로 로드되도록 하려면 NHP-Server의 etc/resource.toml 설정 파일에서 플러그인 파일 경로를 설정해야 합니다.
 
-![플러그인 파일 경로 설정](../images/plugin_image12.png)
+![플러그인 파일 경로 설정](/images/plugin_image12.png)
 
 ***그림 8 플러그인 파일 경로 설정***
 
@@ -217,7 +217,7 @@ example.go와 같은 일반적인 플러그인 파일은 다음 내용을 포함
 
 ***플러그인의 컴파일 로직***: Makefile 내 plugins: 작업이 플러그인의 컴파일 실행을 담당하며, 아래 그림과 같습니다.
 
-![플러그인 컴파일 작업 plugins](../images/plugin_image13.png)
+![플러그인 컴파일 작업 plugins](/images/plugin_image13.png)
 
 ***그림 9 플러그인 컴파일 작업 plugins***
 

@@ -2,7 +2,7 @@
 layout: page
 title: 소스 코드 빌드
 nav_order: 7
-permalink: /kr/build/
+permalink: /ko/build/
 ---
 
 # OpenNHP 빌드
@@ -16,7 +16,7 @@ permalink: /kr/build/
 **참고:** Windows 10/11에서는 `WSL` 서브시스템을 통해 Linux를 실행할 수 있습니다. 자세한 내용은 WSL 공식 문서를 참고하십시오: <https://learn.microsoft.com/ko-kr/windows/wsl/install>
 
 - **【WSL 기능 활성화】** Win10에서는 WSL을 사용하여 Linux를 설치하려면 먼저 WSL을 활성화해야 합니다. 설정 화면은 아래 그림을 참고하십시오.
-   ![Win10에서의 WSL 설정](../images/win10wsl.png)
+   ![Win10에서의 WSL 설정](/images/win10wsl.png)
 - **【WSL에 Linux 설치】** WSL에 Ubuntu Linux를 설치하는 것을 권장합니다. PowerShell에서 다음 명령을 실행하여 설치합니다:
 
    ```bat
@@ -65,7 +65,7 @@ permalink: /kr/build/
     - GCC 설치: `sudo apt install build-essential`
   - **Windows**:
     1. 첫 번째 단계: **mingw64 설치**. mingw64는 msys2의 패키지 관리 도구를 통해 다운로드할 수 있습니다. msys2 설치 시스템 요구 사항과 다운로드·설치 튜토리얼은 다음을 참고하십시오: <https://www.msys2.org/>.
-    ![install_msys2](../images/install_msys2.png)
+    ![install_msys2](/images/install_msys2.png)
 
     2. 두 번째 단계: **GCC 설치**. msys2 콘솔에서 다음 명령을 입력합니다:
 

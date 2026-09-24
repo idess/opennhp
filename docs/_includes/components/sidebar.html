@@ -2,7 +2,7 @@
   Override of jtd's sidebar.html. Two changes vs upstream:
   1. Use `include` instead of `include_cached` for components/site_nav.html
      so our site_nav override can filter nav items per page based on
-     language (English vs /zh-cn/). jtd's default caches the nav output
+     language (English vs /zh-cn/ vs /ko/). jtd's default caches the nav output
      across pages, which would make the filter's first render stick for
      every page.
   2. Drop the fallback "This site uses Just the Docs…" footer entirely —

@@ -2,7 +2,7 @@
 layout: page
 title: 기능 목록
 nav_order: 3
-permalink: /kr/features/
+permalink: /ko/features/
 ---
 
 # OpenNHP 기능 목록

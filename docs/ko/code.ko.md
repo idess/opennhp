@@ -2,7 +2,7 @@
 layout: page
 title: 소스 코드 해설
 nav_order: 8
-permalink: /kr/code/
+permalink: /ko/code/
 ---
 
 # OpenNHP 코드 해설
@@ -16,7 +16,7 @@ permalink: /kr/code/
 1. 상위 로직 컴포넌트 계층은 UDP 연결의 수립, 유지 및 종료를 담당합니다.
 2. Device 계층은 다음을 담당합니다: 1. 상위 계층의 평문 메시지를 NHP 패킷으로 변환하여 연결로 전송; 2. 연결로부터 수신한 NHP 패킷을 평문 메시지로 변환하여 상위 계층에 제공하여 처리.
 3. 상위 로직 컴포넌트가 제공
-![avatar](../images/provide.png)
+![avatar](/images/provide.png)
 
 ## 2. 연결 관리
 

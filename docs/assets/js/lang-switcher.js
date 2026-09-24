@@ -1,39 +1,49 @@
 // Language switcher for docs.opennhp.org
-// Dropdown menu with English / 简体中文. Clicking an option navigates to
-// the equivalent page in the other language when possible, or falls back
-// to that language's root.
+// Dropdown menu with English / 简体中文 / 한국어. Clicking an option
+// navigates to the equivalent page in the other language when
+// possible, or falls back to that language's root.
 
 (function () {
-  var ZH_PREFIX = '/zh-cn';
-  // There is no /zh-cn/ landing page — the Chinese "Overview" equivalent
-  // lives at /zh-cn/overview/. Map the English root ↔ Chinese overview.
-  var ZH_OVERVIEW = '/zh-cn/overview/';
+  var PREFIXES = { 'zh-cn': '/zh-cn', 'ko': '/ko' };
+  // There is no /zh-cn/ or /ko/ landing page — each language's "Overview"
+  // equivalent lives at /<lang>/overview/. Map the English root ↔ that page.
+  var OVERVIEW = { 'zh-cn': '/zh-cn/overview/', 'ko': '/ko/overview/' };
 
-  /* Pages that exist in only one language. Selecting the other
-     language from one of these sends the user to that language's
-     root/overview instead of a non-existent path. Keep these lists
-     in sync with the docs/ filesystem. */
+  /* Pages that exist in only one language. Selecting another language
+     from one of these sends the user to that language's root/overview
+     instead of a non-existent path. Keep these lists in sync with the
+     docs/ filesystem. */
   var ENGLISH_ONLY_PATHS = [];
-  var CHINESE_ONLY_PATHS = [
-    '/zh-cn/claw-dhp-demo/'
-  ];
+  var LANG_ONLY_PATHS = {
+    'zh-cn': ['/zh-cn/claw-dhp-demo/'],
+    'ko': []
+  };
+
+  function currentLang(path) {
+    for (var lang in PREFIXES) {
+      if (path.indexOf(PREFIXES[lang] + '/') === 0) return lang;
+    }
+    return 'en';
+  }
 
   function targetUrl(lang) {
     var path = window.location.pathname;
-    var onZh = path.indexOf(ZH_PREFIX + '/') === 0;
+    var onLang = currentLang(path);
 
-    if (lang === 'zh-cn') {
-      if (onZh) return path;
-      if (path === '/' || path === '') return ZH_OVERVIEW;
-      if (ENGLISH_ONLY_PATHS.indexOf(path) !== -1) return ZH_OVERVIEW;
-      return ZH_PREFIX + path;
+    if (lang === 'en') {
+      if (onLang === 'en') return path;
+      if (path === OVERVIEW[onLang]) return '/';
+      if ((LANG_ONLY_PATHS[onLang] || []).indexOf(path) !== -1) return '/';
+      return path.slice(PREFIXES[onLang].length) || '/';
     }
-    // lang === 'en'
-    if (!onZh) return path;
-    if (path === ZH_OVERVIEW) return '/';
-    if (CHINESE_ONLY_PATHS.indexOf(path) !== -1) return '/';
-    var stripped = path.slice(ZH_PREFIX.length) || '/';
-    return stripped;
+    // lang is 'zh-cn' or 'ko'
+    if (onLang === lang) return path;
+    var basePath = onLang === 'en' ? path
+      : (path.slice(PREFIXES[onLang].length) || '/');
+    if (basePath === '/' || basePath === '') return OVERVIEW[lang];
+    if (onLang === 'en' && ENGLISH_ONLY_PATHS.indexOf(basePath) !== -1) return OVERVIEW[lang];
+    if (onLang !== 'en' && (LANG_ONLY_PATHS[onLang] || []).indexOf(path) !== -1) return OVERVIEW[lang];
+    return PREFIXES[lang] + basePath;
   }
 
   function closeMenu(button, menu) {

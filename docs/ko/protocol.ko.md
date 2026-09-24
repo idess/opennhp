@@ -3,7 +3,7 @@ layout: page
 title: 프로토콜 참조
 nav_order: 13
 has_children: true
-permalink: /kr/protocol/
+permalink: /ko/protocol/
 description: OpenNHP 온더와이어 형식 참조. CSA NHP 규격을 Go 구현에 매핑합니다.
 ---
 
@@ -20,8 +20,8 @@ OpenNHP가 구현하는 네트워크 인프라 은닉 프로토콜(NHP)의 온�
 
 ## 이 섹션의 내용
 
-- **[메시지 헤더]({{ '/kr/protocol/header/' | relative_url }})** — 모든 NHP 또는 DHP 패킷 앞에 붙는 240/304바이트 고정 헤더. 필드 레이아웃, 난독화 방식, 각 필드가 암호 프로토콜에서 하는 역할.
-- **[메시지 타입]({{ '/kr/protocol/messages/' | relative_url }})** — 17가지 NHP 메시지 타입과 11가지 DHP 타입 전부를 발신자/수신자 역할, 페이로드 필드, 소스 코드 진입점과 함께 나열합니다.
+- **[메시지 헤더]({{ '/ko/protocol/header/' | relative_url }})** — 모든 NHP 또는 DHP 패킷 앞에 붙는 240/304바이트 고정 헤더. 필드 레이아웃, 난독화 방식, 각 필드가 암호 프로토콜에서 하는 역할.
+- **[메시지 타입]({{ '/ko/protocol/messages/' | relative_url }})** — 17가지 NHP 메시지 타입과 11가지 DHP 타입 전부를 발신자/수신자 역할, 페이로드 필드, 소스 코드 진입점과 함께 나열합니다.
 
 ## 규격 ↔ 구현
 
@@ -31,7 +31,7 @@ OpenNHP가 구현하는 네트워크 인프라 은닉 프로토콜(NHP)의 온�
 | NHP Message Types (Table 4, Appendix 2) | [`nhp/common/nhpmsg.go`](https://github.com/OpenNHP/opennhp/blob/main/nhp/common/nhpmsg.go) |
 | 암호 알고리즘 및 프레임워크 | [`nhp/core/crypto.go`](https://github.com/OpenNHP/opennhp/blob/main/nhp/core/crypto.go), [`nhp/core/device.go`](https://github.com/OpenNHP/opennhp/blob/main/nhp/core/device.go) |
 | NHP 워크플로 (Figure 3) | [`endpoints/agent/`](https://github.com/OpenNHP/opennhp/tree/main/endpoints/agent), [`endpoints/server/`](https://github.com/OpenNHP/opennhp/tree/main/endpoints/server), [`endpoints/ac/`](https://github.com/OpenNHP/opennhp/tree/main/endpoints/ac) |
-| SDP 통합 | [배포]({{ '/kr/deploy/' | relative_url }}) 참고 |
+| SDP 통합 | [배포]({{ '/ko/deploy/' | relative_url }}) 참고 |
 | 로깅 | [`nhp/log/`](https://github.com/OpenNHP/opennhp/tree/main/nhp/log) |
 
 ## 규격 버전
@@ -53,13 +53,13 @@ OpenNHP는 CSA 제로 트러스트 워킹 그룹이 발표한 NHP 백서를 따�
 
 **이 섹션에서 다루지 않는 것:**
 
-- 설정 파일 형식 → [OpenNHP 배포]({{ '/kr/deploy/' | relative_url }}) 참고
-- 구성 요소 내부 구현 세부 사항 → [소스 코드 해설]({{ '/kr/code/' | relative_url }}) 참고
-- 플러그인 인터페이스 → [서버 플러그인 개발]({{ '/kr/server_plugin/' | relative_url }}) 및 [클라이언트 SDK]({{ '/kr/agent_sdk/' | relative_url }}) 참고
+- 설정 파일 형식 → [OpenNHP 배포]({{ '/ko/deploy/' | relative_url }}) 참고
+- 구성 요소 내부 구현 세부 사항 → [소스 코드 해설]({{ '/ko/code/' | relative_url }}) 참고
+- 플러그인 인터페이스 → [서버 플러그인 개발]({{ '/ko/server_plugin/' | relative_url }}) 및 [클라이언트 SDK]({{ '/ko/agent_sdk/' | relative_url }}) 참고
 
 ## 용어
 
-이 섹션에서 사용하는 표준 용어는 [용어집]({{ '/kr/glossary/' | relative_url }})에
+이 섹션에서 사용하는 표준 용어는 [용어집]({{ '/ko/glossary/' | relative_url }})에
 정의되어 있습니다. 백서는 SDP 통합 맥락에서 가끔 동의어를 사용하지만
 (예: "게이트웨이"로 NHP-AC를 지칭), Go 코드와 일치시키기 위해 이 문서는
 항상 NHP 공식 명칭을 사용합니다.

@@ -2,7 +2,7 @@
 layout: page
 title: NHP 빠른 시작
 nav_order: 2
-permalink: /kr/nhp_quick_start/
+permalink: /ko/nhp_quick_start/
 ---
 
 # NHP 빠른 시작
